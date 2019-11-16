@@ -25,5 +25,11 @@ class HelloServiceApplicationTests {
 				.andExpect(status().isOk())
 				.andExpect(MockMvcResultMatchers.content().string("Hello-service working !!"));
     }
+    @Test
+    public void testMessageFail() throws Exception {
+        mockMvc.perform(get("/"))
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.content().string("Hello-service working !!"));
+    }
 
 }
